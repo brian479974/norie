@@ -480,6 +480,64 @@ section {
   letter-spacing: 0.05em;
 }
 
+.flavor-spotlight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.flavor-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px -20px rgba(31,36,33,0.15);
+  transition: transform 0.3s ease;
+  margin: 0;
+}
+.flavor-card:hover { transform: translateY(-6px); }
+.flavor-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+.flavor-card figcaption {
+  padding: 1.5rem 1.6rem 1.8rem 1.6rem;
+}
+.flavor-card .flavor-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  color: var(--pistachio-deep);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.flavor-card h4 {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.4rem 0 0.3rem 0;
+  color: var(--charcoal);
+}
+.flavor-card .zh {
+  font-size: 0.9rem;
+  color: var(--soft-gray);
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+.product-gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px -15px rgba(31,36,33,0.18);
+}
+
 /* ==================== AI-FIRST ==================== */
 .ai-first {
   background: var(--cream);
@@ -841,6 +899,7 @@ section {
   .hero-metrics, .product-formats, .product-specs, .cost-grid, .channel-row, .kpi-row, .amb-attrs {
     grid-template-columns: 1fr 1fr;
   }
+  .flavor-spotlight, .product-gallery { grid-template-columns: 1fr; }
   .channel-row { grid-template-columns: 1fr 1fr; }
   .footer-container { grid-template-columns: 1fr 1fr; }
 }
@@ -1014,6 +1073,35 @@ section {
         <div class="occasion">Octet · 送禮 Gifting</div>
         <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--soft-gray);">精品禮盒包裝</p>
       </div>
+    </div>
+
+    <h3 class="serif" style="font-size: 1.8rem; margin: 5rem 0 1rem 0;">Flavor Spotlight</h3>
+    <p style="color: var(--soft-gray); margin-bottom: 2rem;">為「掰開、流心、分享」設計的三個瞬間 — 同樣的雲朵酥外殼、三種完全不同的流心人格。</p>
+    <div class="flavor-spotlight">
+      <figure class="flavor-card">
+        <img src="assets/package-1.png" alt="Pistachio Kunafa Cloud — 開心果流心斷面">
+        <figcaption>
+          <span class="flavor-tag">Flavor 01</span>
+          <h4>Pistachio Kunafa Cloud</h4>
+          <p class="zh">開心果 · Sage Green 流心</p>
+        </figcaption>
+      </figure>
+      <figure class="flavor-card">
+        <img src="assets/package-2.png" alt="Hojicha Caramel Cloud — 焙茶焦糖流心斷面">
+        <figcaption>
+          <span class="flavor-tag">Flavor 02</span>
+          <h4>Hojicha Caramel Cloud</h4>
+          <p class="zh">焙茶焦糖 · Caramel Brown 流心</p>
+        </figcaption>
+      </figure>
+      <figure class="flavor-card">
+        <img src="assets/package-3.png" alt="Taro Mochi Cloud — 芋泥麻糬流心斷面">
+        <figcaption>
+          <span class="flavor-tag">Flavor 03</span>
+          <h4>Taro Mochi Cloud</h4>
+          <p class="zh">芋泥麻糬 · Dusty Purple 流心</p>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
