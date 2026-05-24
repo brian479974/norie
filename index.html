@@ -846,6 +846,8 @@ section {
     <a href="#product">Product</a>
     <a href="#ai-first">AI-First</a>
     <a href="#ambassador">Ambassador</a>
+    <a href="#campaign">Films</a>
+    <a href="#music">Music</a>
     <a href="#markets">Markets</a>
     <a href="#invest" class="nav-cta">Invest</a>
   </div>
@@ -886,7 +888,7 @@ section {
     </div>
     <div class="hero-visual">
       <div class="hero-visual-badge">Pistachio Kunafa Cloud</div>
-      <img src="assets/hero-product.png" alt="Pistachio Kunafa Cloud — 開心果 kunafa 雲朵酥" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--pistachio-light), var(--cream-warm))';">
+      <img src="assets/brand-1.png" alt="Norié — Pistachio Kunafa Cloud brand visual">
     </div>
   </div>
 </section>
@@ -950,7 +952,7 @@ section {
 
     <div class="product-hero">
       <div class="product-visual">
-        <img src="assets/hero-product.png" alt="Pistachio Kunafa Cloud 三規格" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--pistachio-light), var(--cream-warm))';">
+        <img src="assets/product-formats.png" alt="Pistachio Kunafa Cloud 三規格包裝">
       </div>
       <div>
         <h3 class="product-name serif">
@@ -1087,7 +1089,9 @@ section {
   <div class="container">
     <div class="amb-grid">
       <div class="amb-visual">
-        <img src="assets/lucy.png" alt="LUCY 蘇小鹿 — Norié AI Brand Ambassador" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--pistachio-light), var(--gold))';">
+        <video src="assets/lucy-ad.mp4" poster="assets/lucy.png" controls preload="metadata" playsinline style="width:100%; height:100%; object-fit:cover;">
+          <img src="assets/lucy.png" alt="LUCY 蘇小鹿">
+        </video>
       </div>
       <div>
         <div class="section-eyebrow">Brand Ambassador</div>
@@ -1123,6 +1127,238 @@ section {
           <li><strong>零授權零年費</strong> — 行銷預算回歸產品本身</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CAMPAIGN VIDEOS ==================== -->
+<style>
+.campaign { background: var(--cream); }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.video-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px -15px rgba(31,36,33,0.15);
+  transition: transform 0.3s ease;
+}
+.video-card:hover { transform: translateY(-4px); }
+.video-card video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: #000;
+  display: block;
+}
+.video-card .meta {
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-card .meta h4 {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.video-card .meta .ch {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--soft-gray);
+}
+.video-card .badge {
+  background: var(--pistachio-light);
+  color: var(--pistachio-deep);
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+/* ==================== MUSIC ==================== */
+.music {
+  background: linear-gradient(135deg, var(--charcoal) 0%, #1a2520 100%);
+  color: var(--cream);
+}
+.music .section-title { color: var(--cream); }
+.music .section-eyebrow { color: var(--gold); }
+.music .section-lead { color: rgba(250,247,240,0.7); }
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.music-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.music-card .track-num {
+  font-family: "Playfair Display", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  font-weight: 600;
+}
+.music-card h4 {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 1.4rem;
+  margin: 0.4rem 0 0.3rem 0;
+  color: var(--cream);
+}
+.music-card .duration {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+.music-card .desc {
+  font-size: 0.9rem;
+  color: rgba(250,247,240,0.65);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+.music-card audio {
+  width: 100%;
+  margin-top: auto;
+}
+.music-card audio::-webkit-media-controls-panel {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.music-credits {
+  margin-top: 4rem;
+  padding: 2rem 2.5rem;
+  background: rgba(201,168,118,0.08);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+}
+.music-credits .hook {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--gold);
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+.music-credits .src {
+  font-size: 0.85rem;
+  color: rgba(250,247,240,0.55);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 900px) {
+  .video-grid, .music-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<section class="campaign" id="campaign">
+  <div class="container">
+    <div class="section-eyebrow">Campaign Films</div>
+    <h2 class="section-title serif">One slogan.<br><em>Four films.</em> Multi-format.</h2>
+    <p class="section-lead">
+      <strong>Break Softly. Melt Beautifully.</strong> 四部影片共用同一句口號，每個通路一個專屬版本 —
+      Grok Video 一次生成，跨語言、跨格式、零授權成本。AI 優先的第三個結構性成本差。
+    </p>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <video src="assets/ad-cn.mp4" controls preload="metadata" playsinline></video>
+        <div class="meta">
+          <div>
+            <h4>中文代言廣告</h4>
+            <div class="ch">TikTok · 小紅書 · 台灣 / 中國市場</div>
+          </div>
+          <span class="badge">CN</span>
+        </div>
+      </div>
+      <div class="video-card">
+        <video src="assets/ad-en.mp4" controls preload="metadata" playsinline></video>
+        <div class="meta">
+          <div>
+            <h4>英文代言廣告</h4>
+            <div class="ch">TikTok · LA Gen Z 主打</div>
+          </div>
+          <span class="badge">EN</span>
+        </div>
+      </div>
+      <div class="video-card">
+        <video src="assets/ad-product.mp4" controls preload="metadata" playsinline></video>
+        <div class="meta">
+          <div>
+            <h4>純產品廣告</h4>
+            <div class="ch">Break · Melt · Share moment</div>
+          </div>
+          <span class="badge">PRODUCT</span>
+        </div>
+      </div>
+      <div class="video-card">
+        <video src="assets/ad-reels.mp4" controls preload="metadata" playsinline></video>
+        <div class="meta">
+          <div>
+            <h4>Instagram Reels 直式</h4>
+            <div class="ch">9:16 直式 · Reels / Stories</div>
+          </div>
+          <span class="badge">REELS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ORIGINAL MUSIC ==================== -->
+<section class="music" id="music">
+  <div class="container">
+    <div class="section-eyebrow">Original Music</div>
+    <h2 class="section-title serif">Three tracks.<br><em>Thirty minutes.</em></h2>
+    <p class="section-lead">
+      Dream-pop × City-pop × Lo-fi K-cafe fusion · 92-104 BPM · 無強烈鼓點、咖啡店午後氛圍。
+      從 brief 到三首歌成品不到 30 分鐘 — Suno 生成，零授權費。AI 優先的第四個結構性成本差。
+    </p>
+
+    <div class="music-grid">
+      <div class="music-card">
+        <div class="track-num">TRACK 01</div>
+        <h4>Anthem</h4>
+        <div class="duration">主題曲 · 1:58</div>
+        <p class="desc">完整品牌主題曲 — 用於 launch event、品牌影片、年度大型 campaign。</p>
+        <audio src="assets/anthem.mp3" controls preload="metadata"></audio>
+      </div>
+      <div class="music-card">
+        <div class="track-num">TRACK 02</div>
+        <h4>Jingle</h4>
+        <div class="duration">短版 · 0:30</div>
+        <p class="desc">廣告 jingle — 用於短影音 outro、podcast 廣告、Reels 配樂。</p>
+        <audio src="assets/jingle.mp3" controls preload="metadata"></audio>
+      </div>
+      <div class="music-card">
+        <div class="track-num">TRACK 03</div>
+        <h4>Full Song</h4>
+        <div class="duration">完整版 · 3:45</div>
+        <p class="desc">完整歌曲版 — Spotify / Apple Music 上架、Pop-up 店內背景音樂。</p>
+        <audio src="assets/full-song.mp3" controls preload="metadata"></audio>
+      </div>
+    </div>
+
+    <div class="music-credits">
+      <p class="hook">"Break it open, watch it melt — 輕輕掰開、漂亮流心；<br>Pistachio cloud, I'm feeling myself — Norié moment、甜得剛好。"</p>
+      <p class="src">— Hook 歌詞 · Brand Anthem · Generated with Suno AI</p>
     </div>
   </div>
 </section>
