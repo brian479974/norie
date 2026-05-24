@@ -556,13 +556,17 @@ section {
   align-items: center;
 }
 .amb-visual {
-  aspect-ratio: 3/4;
-  background: var(--cream);
+  aspect-ratio: 5/4;
+  background: #000;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 30px 80px -20px rgba(31,36,33,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.amb-visual img { width: 100%; height: 100%; object-fit: cover; }
+.amb-visual img,
+.amb-visual video { width: 100%; height: 100%; object-fit: contain; }
 
 .amb-name {
   font-family: "Playfair Display", "Noto Serif TC", serif;
@@ -1094,7 +1098,7 @@ section {
   <div class="container">
     <div class="amb-grid">
       <div class="amb-visual">
-        <video src="assets/lucy-ad.mp4" poster="assets/lucy.png" controls preload="metadata" playsinline style="width:100%; height:100%; object-fit:cover;">
+        <video src="assets/ad-cn.mp4" poster="assets/lucy.png" controls preload="metadata" playsinline>
           <img src="assets/lucy.png" alt="LUCY 蘇小鹿">
         </video>
       </div>
@@ -1156,11 +1160,13 @@ section {
 .video-card:hover { transform: translateY(-4px); }
 .video-card video {
   width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+  height: auto;
+  max-height: 70vh;
   background: #000;
   display: block;
 }
+.video-card.portrait { max-width: 360px; margin: 0 auto; }
+.video-card.portrait video { aspect-ratio: 9/16; object-fit: contain; }
 .video-card .meta {
   padding: 1.2rem 1.4rem;
   display: flex;
@@ -1279,26 +1285,17 @@ section {
     <h2 class="section-title serif">One slogan.<br><em>Four films.</em> Multi-format.</h2>
     <p class="section-lead">
       <strong>Break Softly. Melt Beautifully.</strong> 四部影片共用同一句口號，每個通路一個專屬版本 —
-      Grok Video 一次生成，跨語言、跨格式、零授權成本。AI 優先的第三個結構性成本差。
+      Grok Video + Suno 一次生成，跨語言、跨格式、零授權成本。AI 優先的第三個結構性成本差。
+      （Lucy 中文代言版本見 <a href="#ambassador" style="color:var(--pistachio-deep);text-decoration:underline;">Ambassador</a> 區。）
     </p>
 
     <div class="video-grid">
       <div class="video-card">
-        <video src="assets/ad-cn.mp4" controls preload="metadata" playsinline></video>
-        <div class="meta">
-          <div>
-            <h4>中文代言廣告</h4>
-            <div class="ch">TikTok · 小紅書 · 台灣 / 中國市場</div>
-          </div>
-          <span class="badge">CN</span>
-        </div>
-      </div>
-      <div class="video-card">
         <video src="assets/ad-en.mp4" controls preload="metadata" playsinline></video>
         <div class="meta">
           <div>
-            <h4>英文代言廣告</h4>
-            <div class="ch">TikTok · LA Gen Z 主打</div>
+            <h4>Lucy 英文代言廣告</h4>
+            <div class="ch">TikTok · LA Gen Z 主打 · 5:4 橫式</div>
           </div>
           <span class="badge">EN</span>
         </div>
@@ -1308,19 +1305,29 @@ section {
         <div class="meta">
           <div>
             <h4>純產品廣告</h4>
-            <div class="ch">Break · Melt · Share moment</div>
+            <div class="ch">Break · Melt · Share moment · 3:2 橫式</div>
           </div>
           <span class="badge">PRODUCT</span>
         </div>
       </div>
-      <div class="video-card">
+      <div class="video-card portrait">
         <video src="assets/ad-reels.mp4" controls preload="metadata" playsinline></video>
         <div class="meta">
           <div>
             <h4>Instagram Reels 直式</h4>
-            <div class="ch">9:16 直式 · Reels / Stories</div>
+            <div class="ch">9:16 直式 · Reels / Stories · 10s</div>
           </div>
           <span class="badge">REELS</span>
+        </div>
+      </div>
+      <div class="video-card portrait">
+        <video src="assets/lucy-ad.mp4" controls preload="metadata" playsinline></video>
+        <div class="meta">
+          <div>
+            <h4>主題曲 MV</h4>
+            <div class="ch">Break Softly · 9:16 直式 · 2:54 完整版</div>
+          </div>
+          <span class="badge">MV</span>
         </div>
       </div>
     </div>
