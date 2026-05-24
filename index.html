@@ -826,11 +826,13 @@ section {
   .nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
   section { padding: 5rem 1.5rem; }
-  .hero { padding: 6rem 1.5rem 3rem 1.5rem; }
+  .hero { padding: 6rem 1.5rem 3rem 1.5rem; min-height: auto; }
   .hero-container, .brand-grid, .product-hero, .amb-grid, .market-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
+    align-items: start;
   }
+  .hero-visual, .product-visual, .amb-visual { align-self: start; width: 100%; }
   .hero-metrics, .product-formats, .product-specs, .cost-grid, .channel-row, .kpi-row, .amb-attrs {
     grid-template-columns: 1fr 1fr;
   }
