@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norié · AI-First Asian Premium Sweet Snacks</title>
+<meta name="description" content="Norié — AI 優先亞洲精品甜點零食公司。第一款產品 Pistachio Kunafa Cloud。Break Softly. Melt Beautifully.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pistachio: #A8C97F;
+  --pistachio-deep: #7BA055;
+  --pistachio-light: #E8F0DA;
+  --cream: #FAF7F0;
+  --cream-warm: #F0EBDD;
+  --gold: #C9A876;
+  --gold-deep: #8B6F47;
+  --charcoal: #1F2421;
+  --soft-gray: #6B6F6A;
+  --line: rgba(31,36,33,0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Noto Sans TC", "Inter", -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.serif {
+  font-family: "Playfair Display", "Noto Serif TC", "Georgia", serif;
+  font-feature-settings: "kern", "liga", "dlig";
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ==================== NAV ==================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(250, 247, 240, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  transition: all 0.3s ease;
+}
+
+.nav .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+}
+.nav .logo .accent { color: var(--pistachio-deep); font-style: italic; }
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--soft-gray);
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--pistachio-deep); }
+
+.nav-cta {
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.nav-cta:hover { background: var(--pistachio-deep); }
+
+/* ==================== HERO ==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 3rem 4rem 3rem;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--pistachio-light) 60%, var(--cream-warm) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--pistachio) 0%, transparent 70%);
+  opacity: 0.15;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+}
+
+.hero-title {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--pistachio-deep);
+  font-weight: 600;
+}
+
+.hero-tagline {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--pistachio-deep);
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+}
+
+.hero-lead {
+  font-size: 1.05rem;
+  color: var(--soft-gray);
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-primary {
+  background: var(--charcoal);
+  color: var(--cream);
+  border: 1px solid var(--charcoal);
+}
+.btn-primary:hover {
+  background: var(--pistachio-deep);
+  border-color: var(--pistachio-deep);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--charcoal);
+  border: 1px solid var(--charcoal);
+}
+.btn-secondary:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.metric .num {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--pistachio-deep);
+  line-height: 1;
+}
+.metric .lbl {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--soft-gray);
+  margin-top: 0.4rem;
+}
+.metric .sub {
+  font-size: 0.8rem;
+  color: var(--soft-gray);
+  margin-top: 0.2rem;
+}
+
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--pistachio-light) 0%, var(--cream-warm) 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px -20px rgba(31,36,33,0.25), 0 10px 30px -10px rgba(125,160,85,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(31,36,33,0.15) 100%);
+}
+
+.hero-visual-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: var(--cream);
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--charcoal);
+  z-index: 2;
+}
+
+/* ==================== SECTION GENERIC ==================== */
+section {
+  padding: 8rem 3rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--pistachio-deep);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.5rem;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--pistachio-deep);
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  color: var(--soft-gray);
+  max-width: 640px;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+}
+
+/* ==================== BRAND STORY ==================== */
+.brand-story {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+.brand-story .section-title { color: var(--cream); }
+.brand-story .section-eyebrow { color: var(--gold); }
+.brand-story .section-lead { color: rgba(250,247,240,0.7); }
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.brand-quote {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--cream);
+  border-left: 3px solid var(--gold);
+  padding-left: 2rem;
+  margin: 2rem 0;
+}
+
+.brand-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.brand-bullet {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.brand-bullet .num {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  line-height: 1;
+  font-style: italic;
+}
+.brand-bullet h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: var(--cream);
+  font-weight: 500;
+}
+.brand-bullet p {
+  font-size: 0.95rem;
+  color: rgba(250,247,240,0.65);
+  line-height: 1.7;
+}
+
+/* ==================== PRODUCT ==================== */
+.product {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--pistachio-light) 100%);
+}
+
+.product-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.product-visual {
+  aspect-ratio: 1;
+  background: var(--cream);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px -20px rgba(31,36,33,0.2);
+  position: relative;
+}
+.product-visual img { width: 100%; height: 100%; object-fit: cover; }
+
+.product-name {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.product-name .zh {
+  display: block;
+  font-size: 0.55em;
+  font-weight: 500;
+  color: var(--soft-gray);
+  margin-top: 0.4rem;
+}
+
+.product-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.spec .lbl {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--soft-gray);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.spec .val {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  font-weight: 500;
+}
+
+.product-formats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.format-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.format-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -10px rgba(31,36,33,0.15);
+  border-color: var(--pistachio);
+}
+.format-card .qty {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--pistachio-deep);
+  line-height: 1;
+}
+.format-card .occasion {
+  font-size: 0.85rem;
+  color: var(--soft-gray);
+  margin-top: 0.6rem;
+  letter-spacing: 0.05em;
+}
+
+/* ==================== AI-FIRST ==================== */
+.ai-first {
+  background: var(--cream);
+}
+
+.cost-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.cost-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.cost-card:hover { transform: translateY(-4px); }
+.cost-card .tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--pistachio-deep);
+  padding: 0.3rem 0.7rem;
+  background: var(--pistachio-light);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.cost-card h3 {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.cost-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.cost-compare .old {
+  text-decoration: line-through;
+  color: var(--soft-gray);
+}
+.cost-compare .new {
+  color: var(--pistachio-deep);
+  font-weight: 600;
+}
+.cost-compare .lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--soft-gray);
+  margin-bottom: 0.4rem;
+}
+.cost-compare .val {
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+}
+
+/* ==================== AMBASSADOR ==================== */
+.ambassador {
+  background: linear-gradient(135deg, var(--pistachio-light) 0%, var(--cream-warm) 100%);
+}
+.amb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+.amb-visual {
+  aspect-ratio: 3/4;
+  background: var(--cream);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px -20px rgba(31,36,33,0.25);
+}
+.amb-visual img { width: 100%; height: 100%; object-fit: cover; }
+
+.amb-name {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.amb-zh-name {
+  font-size: 1.2rem;
+  color: var(--soft-gray);
+  margin-bottom: 1.5rem;
+  font-family: "Noto Serif TC", serif;
+}
+
+.amb-attrs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+  margin: 2rem 0;
+}
+.amb-attr .lbl {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--soft-gray);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.amb-attr .val {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  color: var(--charcoal);
+}
+
+.amb-pros {
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.amb-pros li {
+  padding-left: 2.5rem;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.amb-pros li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--pistachio-deep);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ==================== MARKETS ==================== */
+.markets {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+.markets .section-title { color: var(--cream); }
+.markets .section-eyebrow { color: var(--gold); }
+
+.market-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.market-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  position: relative;
+}
+.market-flag {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+.market-city {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.3rem 0;
+  color: var(--cream);
+}
+.market-purpose {
+  font-style: italic;
+  color: var(--gold);
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+.market-clusters {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba(250,247,240,0.75);
+}
+.market-clusters li::before {
+  content: "·";
+  margin-right: 0.6rem;
+  color: var(--gold);
+}
+
+.channels {
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.channels h3 {
+  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: var(--cream);
+}
+.channel-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.channel {
+  background: rgba(168,201,127,0.08);
+  border: 1px solid rgba(168,201,127,0.2);
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+}
+.channel .name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--pistachio);
+  margin-bottom: 0.3rem;
+}
+.channel .role {
+  font-size: 0.75rem;
+  color: rgba(250,247,240,0.55);
+  letter-spacing: 0.05em;
+}
+
+.kpi-row {
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.kpi {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.kpi .num {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.kpi .lbl {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: rgba(250,247,240,0.7);
+  letter-spacing: 0.1em;
+}
+
+/* ==================== INVEST CTA ==================== */
+.invest {
+  background: linear-gradient(135deg, var(--pistachio-deep) 0%, var(--charcoal) 100%);
+  color: var(--cream);
+  text-align: center;
+}
+.invest .container { max-width: 760px; }
+.invest .section-title { color: var(--cream); }
+.invest .section-eyebrow { color: var(--gold); }
+.invest .tagline {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin: 2rem 0 3rem 0;
+}
+.invest-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--cream);
+  color: var(--charcoal);
+  padding: 1.2rem 2.5rem;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.invest-cta:hover {
+  background: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px -10px rgba(201,168,118,0.5);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: #14181A;
+  color: rgba(250,247,240,0.5);
+  padding: 4rem 3rem 2rem 3rem;
+  font-size: 0.85rem;
+}
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.footer-brand .accent { color: var(--pistachio); font-style: italic; }
+.footer-tag {
+  font-style: italic;
+  color: var(--gold);
+  font-family: "Playfair Display", serif;
+}
+.footer h5 {
+  color: var(--cream);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: rgba(250,247,240,0.35);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
+  .nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  section { padding: 5rem 1.5rem; }
+  .hero { padding: 6rem 1.5rem 3rem 1.5rem; }
+  .hero-container, .brand-grid, .product-hero, .amb-grid, .market-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-metrics, .product-formats, .product-specs, .cost-grid, .channel-row, .kpi-row, .amb-attrs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .channel-row { grid-template-columns: 1fr 1fr; }
+  .footer-container { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav">
+  <a href="#" class="logo">Norié<span class="accent">·</span></a>
+  <div class="nav-links">
+    <a href="#story">Brand</a>
+    <a href="#product">Product</a>
+    <a href="#ai-first">AI-First</a>
+    <a href="#ambassador">Ambassador</a>
+    <a href="#markets">Markets</a>
+    <a href="#invest" class="nav-cta">Invest</a>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">AI-First · Asian Premium</div>
+      <h1 class="hero-title serif">Break Softly.<br><em>Melt Beautifully.</em></h1>
+      <p class="hero-tagline serif">輕輕掰開，漂亮流心</p>
+      <p class="hero-lead">
+        Norié — AI 優先亞洲精品甜點零食公司。第一款產品 <strong>Pistachio Kunafa Cloud</strong>，
+        為 Gen Z 短影音「掰開、流心、分享」瞬間設計。Cookie 品類 × Bar 等級單價 × 短影音流量。
+      </p>
+      <div class="hero-cta-row">
+        <a href="#product" class="btn-primary">Discover Product →</a>
+        <a href="#invest" class="btn-secondary">Investor Brief</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="num">25.4<small style="font-size:0.5em;">%</small></div>
+          <div class="lbl">Cookie Share</div>
+          <div class="sub">甜食品類最大</div>
+        </div>
+        <div class="metric">
+          <div class="num">$5.98</div>
+          <div class="lbl">Bar Avg ASP</div>
+          <div class="sub">精品定位可行</div>
+        </div>
+        <div class="metric">
+          <div class="num">5y</div>
+          <div class="lbl">Fastest Growth</div>
+          <div class="sub">Potato Chip 引領</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-badge">Pistachio Kunafa Cloud</div>
+      <img src="assets/hero-product.png" alt="Pistachio Kunafa Cloud — 開心果 kunafa 雲朵酥" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--pistachio-light), var(--cream-warm))';">
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BRAND STORY ==================== -->
+<section class="brand-story" id="story">
+  <div class="container">
+    <div class="section-eyebrow">The Brand</div>
+    <h2 class="section-title serif">A new category between<br><em>premium</em> and <em>shareable</em>.</h2>
+
+    <div class="brand-grid">
+      <div>
+        <p class="section-lead" style="color: rgba(250,247,240,0.75); max-width: none;">
+          全球甜食零食 $500B 市場中，「精品價格 × 社群原生 × 亞洲風味」的交集仍是空白。
+          Norié 切的不是新習慣，是更好的版本 — 從第一款產品到完整品牌世界觀，全部由 AI 優先團隊在 48 小時內完成。
+        </p>
+        <blockquote class="brand-quote">
+          切 Cookie 品類、走 Bar 等級單價、生短影音等級流量。
+        </blockquote>
+      </div>
+
+      <div class="brand-bullets">
+        <div class="brand-bullet">
+          <div class="num serif">01</div>
+          <div>
+            <h4>美感為主，無麩質為輔</h4>
+            <p>產品設計核心不是健康訴求，是「可拍攝的 break-and-melt moment」。決定 Norié 不是健康品牌，是精品品牌。</p>
+          </div>
+        </div>
+        <div class="brand-bullet">
+          <div class="num serif">02</div>
+          <div>
+            <h4>為社群而生，非事後找場景</h4>
+            <p>掰開、流心、分享 — 產品結構本身就是 Gen Z 短影音的腳本。甜食天生比鹹食更適合社群分享。</p>
+          </div>
+        </div>
+        <div class="brand-bullet">
+          <div class="num serif">03</div>
+          <div>
+            <h4>AI 是團隊，不是工具</h4>
+            <p>48 小時、5 個 AI 工具、6 個任務 — 從概念跑到投資人 ready。下一個 48 小時可以再跑下一個品類。</p>
+          </div>
+        </div>
+        <div class="brand-bullet">
+          <div class="num serif">04</div>
+          <div>
+            <h4>雙城驗證，不是單市場賭注</h4>
+            <p>LA 驗證 social velocity，台北驗證 conversion 與 gifting。兩個市場驗證的不是同一件事。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRODUCT ==================== -->
+<section class="product" id="product">
+  <div class="container">
+    <div class="section-eyebrow">The First Product</div>
+    <h2 class="section-title serif">Pistachio Kunafa Cloud</h2>
+
+    <div class="product-hero">
+      <div class="product-visual">
+        <img src="assets/hero-product.png" alt="Pistachio Kunafa Cloud 三規格" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--pistachio-light), var(--cream-warm))';">
+      </div>
+      <div>
+        <h3 class="product-name serif">
+          Pistachio Kunafa Cloud
+          <span class="zh">開心果 Kunafa 雲朵酥</span>
+        </h3>
+        <p style="color: var(--soft-gray); font-size: 1.05rem; line-height: 1.8;">
+          無麩質千層酥感外殼 × 開心果 kunafa 流心奶霜 × 酥脆米粉薄片。
+          綠色流心、酥脆斷面、開盒儀式 — 為「掰開、流心、分享」瞬間設計。
+        </p>
+        <div class="product-specs">
+          <div class="spec">
+            <div class="lbl">Texture</div>
+            <div class="val serif">Layered · Molten · Crisp</div>
+          </div>
+          <div class="spec">
+            <div class="lbl">Format</div>
+            <div class="val serif">5 × 5 × 4 cm Cube</div>
+          </div>
+          <div class="spec">
+            <div class="lbl">Allergen</div>
+            <div class="val serif">Gluten-Free</div>
+          </div>
+          <div class="spec">
+            <div class="lbl">Hero Moment</div>
+            <div class="val serif">Break · Melt · Share</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Three Formats · Three Occasions</h3>
+    <p style="color: var(--soft-gray); margin-bottom: 2rem;">一個產品、三個價格錨點、覆蓋所有消費場景。</p>
+    <div class="product-formats">
+      <div class="format-card">
+        <div class="qty serif">1</div>
+        <div class="occasion">Single · 衝動購買</div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--soft-gray);">5×5×4 cm 單入精品盒</p>
+      </div>
+      <div class="format-card">
+        <div class="qty serif">4</div>
+        <div class="occasion">Quartet · 自用分享</div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--soft-gray);">日常 indulgence</p>
+      </div>
+      <div class="format-card">
+        <div class="qty serif">8</div>
+        <div class="occasion">Octet · 送禮 Gifting</div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--soft-gray);">精品禮盒包裝</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AI-FIRST ==================== -->
+<section class="ai-first" id="ai-first">
+  <div class="container">
+    <div class="section-eyebrow">AI-First Operations</div>
+    <h2 class="section-title serif">Four structural<br><em>cost differences.</em></h2>
+    <p class="section-lead">
+      傳統消費品牌做完整 visual identity 要 3 個月、燒 50 萬以上預算。
+      Norié 4 小時、零授權成本。這是 AI 優先零食公司的四個結構性成本差。
+    </p>
+
+    <div class="cost-grid">
+      <div class="cost-card">
+        <span class="tag">Visual Identity</span>
+        <h3>完整 Brand Sheet</h3>
+        <p style="color: var(--soft-gray); font-size: 0.95rem;">產品、包裝、色彩、字體 — 全部 GPT Image 跑出來。</p>
+        <div class="cost-compare">
+          <div>
+            <div class="lbl">Traditional</div>
+            <div class="val old">3 months · NT$500K+</div>
+          </div>
+          <div>
+            <div class="lbl">Norié</div>
+            <div class="val new">4 hours · $0 license</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cost-card">
+        <span class="tag">Brand Ambassador</span>
+        <h3>AI 虛擬代言人 LUCY</h3>
+        <p style="color: var(--soft-gray); font-size: 0.95rem;">跨中英文、無限重生、每通路專屬版本。</p>
+        <div class="cost-compare">
+          <div>
+            <div class="lbl">Real Talent</div>
+            <div class="val old">NT$1M+ / market / yr</div>
+          </div>
+          <div>
+            <div class="lbl">Norié</div>
+            <div class="val new">$0 · bilingual ready</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cost-card">
+        <span class="tag">Video Campaign</span>
+        <h3>4 部廣告影片</h3>
+        <p style="color: var(--soft-gray); font-size: 0.95rem;">中英文代言、純產品、Reels 直式 — Grok Video 一次生成。</p>
+        <div class="cost-compare">
+          <div>
+            <div class="lbl">Traditional</div>
+            <div class="val old">4 weeks · NT$2M+</div>
+          </div>
+          <div>
+            <div class="lbl">Norié</div>
+            <div class="val new">1 day · multi-format</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cost-card">
+        <span class="tag">Original Music</span>
+        <h3>3 首品牌主題曲</h3>
+        <p style="color: var(--soft-gray); font-size: 0.95rem;">Anthem 1:58 · Jingle 0:30 · Full 3:45 — Suno 生成。</p>
+        <div class="cost-compare">
+          <div>
+            <div class="lbl">Traditional</div>
+            <div class="val old">4 weeks · NT$300K+</div>
+          </div>
+          <div>
+            <div class="lbl">Norié</div>
+            <div class="val new">30 min · zero royalty</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AMBASSADOR ==================== -->
+<section class="ambassador" id="ambassador">
+  <div class="container">
+    <div class="amb-grid">
+      <div class="amb-visual">
+        <img src="assets/lucy.png" alt="LUCY 蘇小鹿 — Norié AI Brand Ambassador" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--pistachio-light), var(--gold))';">
+      </div>
+      <div>
+        <div class="section-eyebrow">Brand Ambassador</div>
+        <h2 class="amb-name serif">LUCY</h2>
+        <div class="amb-zh-name">蘇小鹿 · AI Virtual Spokesperson</div>
+        <p style="color: var(--soft-gray); font-size: 1.05rem; line-height: 1.8;">
+          24 歲台北女生，Vibe 是「甜系冷靜、文青質感、鏡頭自然感」。
+          她長的就是我們目標 Gen Z 客群會看的樣子 — 這不是巧合，是設計的鏡像。
+        </p>
+
+        <div class="amb-attrs">
+          <div class="amb-attr">
+            <div class="lbl">Age</div>
+            <div class="val serif">24</div>
+          </div>
+          <div class="amb-attr">
+            <div class="lbl">Base</div>
+            <div class="val serif">Taipei</div>
+          </div>
+          <div class="amb-attr">
+            <div class="lbl">Vibe</div>
+            <div class="val serif">Sweet · Calm · Natural</div>
+          </div>
+          <div class="amb-attr">
+            <div class="lbl">Languages</div>
+            <div class="val serif">中文 · English</div>
+          </div>
+        </div>
+
+        <ul class="amb-pros">
+          <li><strong>跨市場一人</strong> — 中英文不用重簽、不用重新談</li>
+          <li><strong>無限變形</strong> — 每通路、每口味、每檔活動都有專屬版本</li>
+          <li><strong>零授權零年費</strong> — 行銷預算回歸產品本身</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MARKETS ==================== -->
+<section class="markets" id="markets">
+  <div class="container">
+    <div class="section-eyebrow">Launch Strategy</div>
+    <h2 class="section-title serif">Two cities.<br><em>Two different proofs.</em></h2>
+    <p class="section-lead" style="color: rgba(250,247,240,0.7);">
+      為什麼不是先美國再亞洲？因為這兩個市場驗證的不是同一件事。
+    </p>
+
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="market-flag">USA</div>
+        <h3 class="market-city serif">Los Angeles</h3>
+        <div class="market-purpose">Validate Social Velocity</div>
+        <p style="color: rgba(250,247,240,0.7); margin-bottom: 1.5rem;">
+          兩週內如果衝不上 TikTok 趨勢，改產品，不浪費全美 launch 預算。
+        </p>
+        <ul class="market-clusters">
+          <li>Koreatown · K-American Gen Z 引爆點</li>
+          <li>Sawtelle · 日系亞洲甜點 social hub</li>
+          <li>UCLA / USC · 學區短影音原生地</li>
+        </ul>
+      </div>
+
+      <div class="market-card">
+        <div class="market-flag">Taiwan</div>
+        <h3 class="market-city serif">Taipei</h3>
+        <div class="market-purpose">Validate Conversion & Gifting</div>
+        <p style="color: rgba(250,247,240,0.7); margin-bottom: 1.5rem;">
+          亞洲甜點原生市場、零教育成本。台北的數字決定大中華區擴張節奏。
+        </p>
+        <ul class="market-clusters">
+          <li>大安 · 高端甜點原生市場</li>
+          <li>信義 · 精品送禮場景</li>
+          <li>中山 · 文青美學集散地</li>
+          <li>東區 · 年輕族群密度</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="channels">
+      <h3 class="serif">Five Channels · Each One Job</h3>
+      <div class="channel-row">
+        <div class="channel">
+          <div class="name">TikTok</div>
+          <div class="role">主戰場 · break-and-melt 短影音</div>
+        </div>
+        <div class="channel">
+          <div class="name">Instagram</div>
+          <div class="role">美學放大</div>
+        </div>
+        <div class="channel">
+          <div class="name">小紅書</div>
+          <div class="role">KOC 種草</div>
+        </div>
+        <div class="channel">
+          <div class="name">Pop-up</div>
+          <div class="role">試吃 · AI flavor quiz</div>
+        </div>
+        <div class="channel">
+          <div class="name">KOL · Café</div>
+          <div class="role">Micro-influencer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="num">3K–5K</div>
+        <div class="lbl">兩週試吃份數</div>
+      </div>
+      <div class="kpi">
+        <div class="num">500+</div>
+        <div class="lbl">UGC 篇數</div>
+      </div>
+      <div class="kpi">
+        <div class="num">15-25%</div>
+        <div class="lbl">試吃轉換率</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INVEST ==================== -->
+<section class="invest" id="invest">
+  <div class="container">
+    <div class="section-eyebrow">Series Seed</div>
+    <h2 class="section-title serif">5 tools. 6 tasks.<br>48 hours.</h2>
+    <p class="tagline">From concept to investor-ready.</p>
+    <p style="color: rgba(250,247,240,0.85); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+      打到 3 個 KPI，Norié 就進入 Series Seed。下一個 48 小時，
+      我們可以再跑下一個品類、下一個市場、下一個產品線 — 這才是 AI 優先的真正資本效率。
+    </p>
+    <a href="mailto:" class="invest-cta">Request Investor Deck →</a>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-brand">Norié<span class="accent">·</span></div>
+      <p class="footer-tag">AI-First Asian Premium Sweet Snacks</p>
+      <p style="margin-top: 0.8rem; font-size: 0.85rem;">Break Softly. Melt Beautifully.</p>
+    </div>
+    <div>
+      <h5>Product</h5>
+      <ul>
+        <li><a href="#product">Pistachio Kunafa Cloud</a></li>
+        <li><a href="#product">Three Formats</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Brand</h5>
+      <ul>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#ai-first">AI-First</a></li>
+        <li><a href="#ambassador">Ambassador</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Launch</h5>
+      <ul>
+        <li><a href="#markets">Los Angeles</a></li>
+        <li><a href="#markets">Taipei</a></li>
+        <li><a href="#invest">Investors</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Norié · NTU EMBA 114-2 · Group 9 Final Project</div>
+    <div>Designed with AI · Crafted in 48 hours</div>
+  </div>
+</footer>
+
+</body>
+</html>
